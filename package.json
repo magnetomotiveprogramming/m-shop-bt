@@ -1,0 +1,23 @@
+{
+  "name": "mern_shopping_list",
+  "version": "1.0.0",
+  "description": "Shopping list built with new MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
+  },
+  "author": "Nasrul Azim",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "create-react-app": "^2.1.8",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.20",
+    "nodemon": "^1.18.10"
+  }
+}
