@@ -38,7 +38,7 @@ class AppNavbar extends Component {
                 <NavItem>
                   <NavLink href="https://github.com/magnetomotiveprogramming/m-shop-bt">
                     Github
-                  </NavLink>
+                </NavLink>
               </NavItem>
               </Nav>
             </Collapse>
