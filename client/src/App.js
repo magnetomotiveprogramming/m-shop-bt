@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import AppNavbar from './components/AppNavBar';
 import ShoppingList from './components/ShoppingList';
+import ItemModal from './components/ItemModal';
+import { Container } from 'reactstrap';
 
 import { Provider } from 'react-redux';
 //Provider glues redux to react. to do this, we need to wrap what we return from clacc App in <Provider />
@@ -15,7 +17,10 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <AppNavbar />
-          <ShoppingList />
+          <Container>
+            <ItemModal />
+            <ShoppingList />
+          </Container>
         </div>
       </Provider>
     );
