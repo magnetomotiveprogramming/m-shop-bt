@@ -1,15 +1,9 @@
 //reducer is where our actual state is going to go and this is where we check our actions
 import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from '../actions/types';
 
-// import uuid from 'uuid';
 
 const initialState = {
-  items: [
-    // { id: uuid(), name: 'Eggs'},
-    // { id: uuid(), name: 'Milk'},
-    // { id: uuid(), name: 'Steak'},
-    // { id: uuid(), name: 'Candy'}
-  ],
+  items: [],
   loading: false
 }
 

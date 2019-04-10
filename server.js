@@ -1,6 +1,9 @@
 //mlab database username: nasrul
 //mlab database pword: nasrul123
 
+//core node js module to deal with paths
+const path = require('path')
+
 const express = require('express');
 //Mongoose is our ORm to interact with MongoDB database, makes everythign a lot easier. You could use a mongoDb driver if you want, but Mogoose is a little bit more intuitive and easier to use aand just better all around.
 const mongoose = require('mongoose');
@@ -28,6 +31,17 @@ mongoose
 //Use Routes
 //anything that goes into api/items, should refer to the items variable, which is defined above.
 app.use('/api/items', items);
+
+//Serve static assets if in production
+if(process.env.NODE_ENV === 'production'){
+  //Set static folder
+  app.use(express.static('client/build'))
+  
+  app.get('*', (req,res)=> {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  })
+
+}
 
 const port = process.env.PORT || 5000;
 
